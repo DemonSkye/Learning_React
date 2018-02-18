@@ -1,0 +1,33 @@
+{
+	"author": "Damien Bell",
+	"main": "main.js",
+	"name": "data-streamer",
+	"version": "0.0.1",
+	"browserify": {
+		"transform": [
+			[
+				"babelify"
+			]
+		]
+	},
+	"dependencies": {
+		"babel-core": "^6.26.0",
+		"react": "^16.2.0",
+		"react-dom": "16.2.0",
+		"react-router": "4.2.0"
+	},
+	"devDependencies": {
+		"babel-plugin-transform-class-properties": "^6.24.1",
+		"babel-plugin-transform-decorators-legacy": "^1.3.4",
+		"babel-preset-es2015": "^6.24.1",
+		"babel-preset-react": "^6.24.1",
+		"babel-preset-stage-0": "^6.24.1",
+		"babel-preset-env": "^1.6.1",
+		"babelify": "^8.0.0",
+		"browserify": "^16.1.0",
+		"watchify": "^3.10.0"
+	},
+	"scripts": {
+		"start": "browserify -t babelify --outfile ./App.js reactive.jsx && electron ."
+	}
+}
