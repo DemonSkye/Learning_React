@@ -1,31 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-class Counter extends React.Component {
-	addOne= () => {
-		this.setState({
-			counter: this.state.counter+1
-		});
-	}
+import {Layout} from "./react-components/Layout"
 
-	constructor(props){
-		super(props);
-		this.state = {counter: 0};
-	}
-	componentDidMount(){
-		this.counter = setInterval(() => this.addOne(), 1000);
-	}
-	componentWillUnmount(){
-		clearInterval(this.counter);
-	}
-
+class main extends React.Component {
 	render() {
 		return(
-			<button onClick={this.addOne}>{this.state.counter}</button>
+			<div>
+				<Layout />
+			</div>
 		);
 	}
 }
 
 ReactDOM.render(
-	<Counter />, document.getElementById("app")
+	<Layout />, document.getElementById("app")
 );
